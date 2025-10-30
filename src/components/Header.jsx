@@ -1,6 +1,7 @@
 import React from 'react'
 import { useCart } from '../context/CartContext'
 
+
 export default function Header({ onAbrirCarrinho }) {
   const { itens } = useCart()
   const totalQtd = itens.reduce((acc, i) => acc + i.qtd, 0)
@@ -15,7 +16,7 @@ export default function Header({ onAbrirCarrinho }) {
         <button className="px-4 py-2 bg-primary-red text-white rounded-md" onClick={onAbrirCarrinho} aria-label="Abrir carrinho">
           Carrinho ({totalQtd})
         </button>
-        <a href="/login" className="text-sm text-gray-700">Área do Restaurante</a>
+        <a href="/Login" className="text-sm text-gray-700">Área do Restaurante</a>
       </div>
     </header>
   )
